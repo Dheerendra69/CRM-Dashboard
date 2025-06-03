@@ -1,0 +1,50 @@
+.history-page {
+  padding: 2rem;
+}
+
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.campaign-card {
+  background-color: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.campaign-card:hover {
+  transform: scale(1.01);
+}
+
+.campaign-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+}
+
+.status-badge.sent {
+  background-color: #16a34a; 
+}
+
+.status-badge.failed {
+  background-color: #dc2626;
+}
+
+.campaign-body p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
