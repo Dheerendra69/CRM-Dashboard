@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Login from "./Login";
 
 export default function Navbar({ user, onLogin, onLogout }) {
@@ -5,9 +6,9 @@ export default function Navbar({ user, onLogin, onLogout }) {
     <nav className="navbar">
       <div className="logo">CRM-Software</div>
       <div className="nav-links">
-        <a href="/">Dashboard</a>
-        <a href="/campaigns">Campaigns</a>
-        <a href="/create">Create</a>
+        <Link to="/">Dashboard</Link>
+        <Link to="/campaigns">Campaigns</Link>
+        <Link to="/create">Create</Link>
       </div>
       <Login user={user} onLogin={onLogin} onLogout={onLogout} />
     </nav>
