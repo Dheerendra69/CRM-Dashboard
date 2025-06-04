@@ -5,10 +5,6 @@ const UserContext = createContext();
 export function UserProvider({ children }) {
   const [user, setUser] = useState(null);
 
-<<<<<<< HEAD
-=======
-  // Load from localStorage on first load
->>>>>>> 70a0d0c (updated readme)
   useEffect(() => {
     const stored = localStorage.getItem("xeno_user");
     if (stored) setUser(JSON.parse(stored));
@@ -34,10 +30,6 @@ export function UserProvider({ children }) {
   );
 }
 
-<<<<<<< HEAD
-=======
-// Custom hook for easy access
->>>>>>> 70a0d0c (updated readme)
 export function useUser() {
   return useContext(UserContext);
 }

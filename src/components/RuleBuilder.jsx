@@ -63,7 +63,7 @@ export default function RuleBuilder({ rules, setRules, logic, setLogic }) {
           className="bg-indigo-600 text-white px-4 py-1 rounded"
           onClick={estimateSegment}
         >
-          Estimate Audience
+          Estimate Audience Size 
         </button>
         {audienceSize !== null && (
           <p className="mt-2 text-green-700 font-medium">
