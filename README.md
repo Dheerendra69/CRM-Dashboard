@@ -2,6 +2,11 @@
 
 A customizable campaign management dashboard that allows users to define audience segments based on specific rules. The platform intelligently converts technical rules into user-friendly, human-readable statements using AI.
 
+## 📸 Screenshots
+
+### 🔐 Hero Page
+![Hero Page](./website-demo/Hero-Page.jpeg)
+
 🌐 **Live Site**: [https://custom-manage.netlify.app/](https://custom-manage.netlify.app/)
 
 ## 🚀 Tech Stack
