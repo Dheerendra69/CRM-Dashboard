@@ -23,7 +23,7 @@ A customizable campaign management dashboard that allows users to define audienc
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/custom-manage.git
+git clone https://github.com/Dheerendra69/CRM-Dashboard.git
 cd custom-manage
 ```
 
