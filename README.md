@@ -30,8 +30,12 @@ A customizable campaign management dashboard that allows users to define audienc
 # Clone the repository
 git clone https://github.com/Dheerendra69/CRM-Dashboard.git
 cd CRM-Dashboard
-# Install dependencies for both frontend and backend
+# Install dependencies for both frontend
 npm install
+npm start
+# Open new terminal
+# Install dependencies for both backend 
 cd ../server
 npm install
+npm run dev
 ```
