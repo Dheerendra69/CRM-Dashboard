@@ -19,7 +19,7 @@ export default function RuleBuilder({ rules, setRules, logic, setLogic }) {
   const estimateSegment = async () => {
     try {
       const response = await axios.post(
-        "https://crm-dashboard-k9ao.onrender.com/api/estimate-segment",
+        "http://locahost:3000/api/estimate-segment",
         { rules, logic }
       );
       setAudienceSize(response.data.size);
@@ -63,7 +63,7 @@ export default function RuleBuilder({ rules, setRules, logic, setLogic }) {
           className="bg-indigo-600 text-white px-4 py-1 rounded"
           onClick={estimateSegment}
         >
-          Estimate Audience Size 
+          Estimate Audience Size
         </button>
         {audienceSize !== null && (
           <p className="mt-2 text-green-700 font-medium">

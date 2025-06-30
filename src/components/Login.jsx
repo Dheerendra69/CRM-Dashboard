@@ -28,12 +28,9 @@ function Login() {
     login(decoded);
 
     try {
-      await axios.post(
-        "https://crm-dashboard-k9ao.onrender.com/api/auth/google",
-        {
-          token: response.credential,
-        }
-      );
+      await axios.post("http://locahost:3000/api/auth/google", {
+        token: response.credential,
+      });
     } catch (err) {
       console.error("Auth error:", err.response?.data || err.message);
     }

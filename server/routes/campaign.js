@@ -60,15 +60,12 @@ router.post("/create", async (req, res) => {
     });
 
     try {
-      await axios.post(
-        "https://crm-dashboard-k9ao.onrender.com/api/vendor/send",
-        {
-          messageId,
-          message,
-          customer,
-          campaignId: campaign._id,
-        }
-      );
+      await axios.post("http://locahost:3000/api/vendor/send", {
+        messageId,
+        message,
+        customer,
+        campaignId: campaign._id,
+      });
 
       console.log(`Message sent to vendor for ${customer.email}`);
     } catch (err) {
@@ -139,7 +136,7 @@ router.post("/create2", async (req, res) => {
     const messageTemplate = messageMatch ? messageMatch[1] : "Default message";
 
     const audienceRes = await axios.post(
-      "https://crm-dashboard-k9ao.onrender.com/api/estimate-segment",
+      "http://locahost:3000/api/estimate-segment",
       {
         rules,
         logic,

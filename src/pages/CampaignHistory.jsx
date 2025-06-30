@@ -10,7 +10,7 @@ export default function CampaignHistory() {
 
   useEffect(() => {
     axios
-      .get("https://crm-dashboard-k9ao.onrender.com/api/campaign/getAll", {
+      .get("http://locahost:3000/api/campaign/getAll", {
         params: { name: user.name },
       })
       .then((res) => setCampaigns(res.data))

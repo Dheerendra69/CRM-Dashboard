@@ -10,7 +10,7 @@ export default function AiCampaignBuilder() {
   const handleSubmit = async () => {
     try {
       const res = await axios.post(
-        "https://crm-dashboard-k9ao.onrender.com/api/campaign/create2",
+        "http://locahost:3000/api/campaign/create2",
         {
           prompt: query,
           createdBy: {
@@ -26,9 +26,43 @@ export default function AiCampaignBuilder() {
   };
 
   return (
-    <div>
-      <textarea value={query} onChange={(e) => setQuery(e.target.value)} />
+    <div className="ai-campaign-container">
+      <h2>OR</h2>
+      <h2>Try our AI</h2>
+      <textarea
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Write your campaign prompt here..."
+      />
       <button onClick={handleSubmit}>Submit</button>
+      <div className="example-queries">
+        <p>💡 Example Queries:</p>
+        <ul>
+          <li
+            onClick={() =>
+              setQuery(
+                "People who haven't shopped in 6 months and spent over ₹5K"
+              )
+            }
+          >
+            People who haven't shopped in 6 months and spent over ₹5K
+          </li>
+          <li
+            onClick={() =>
+              setQuery("Customers with more than 5 visits but zero purchases")
+            }
+          >
+            Customers with more than 5 visits but zero purchases
+          </li>
+          <li
+            onClick={() =>
+              setQuery("Users inactive for 90 days OR total spend > ₹10K")
+            }
+          >
+            Users inactive for 90 days OR total spend greater than ₹10K
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

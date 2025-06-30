@@ -13,17 +13,14 @@ export default function CampaignForm() {
 
   const sendCampaign = async () => {
     try {
-      await axios.post(
-        "https://crm-dashboard-k9ao.onrender.com/api/campaign/create",
-        {
-          segmentRules: { rules, logic },
-          messageTemplate: message,
-          createdBy: {
-            name: user?.name,
-            email: user?.email,
-          },
-        }
-      );
+      await axios.post("http://locahost:3000/api/campaign/create", {
+        segmentRules: { rules, logic },
+        messageTemplate: message,
+        createdBy: {
+          name: user?.name,
+          email: user?.email,
+        },
+      });
       alert("Campaign Sent!");
     } catch (err) {
       console.error(err);

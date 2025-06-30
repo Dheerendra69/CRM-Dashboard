@@ -10,14 +10,11 @@ router.post("/send", async (req, res) => {
 
   setTimeout(async () => {
     try {
-      await axios.post(
-        "https://crm-dashboard-k9ao.onrender.com/api/vendor/receipt",
-        {
-          messageId,
-          campaignId,
-          status,
-        }
-      );
+      await axios.post("http://locahost:3000/api/vendor/receipt", {
+        messageId,
+        campaignId,
+        status,
+      });
     } catch (err) {
       console.error("Failed to send receipt:", err.message);
     }
