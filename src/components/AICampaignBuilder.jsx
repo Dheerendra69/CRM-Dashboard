@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useUser } from "../context/UserContext";
+import "../styles/AiCampaignBuilder.css";
 
 export default function AiCampaignBuilder() {
   const [query, setQuery] = useState("");
