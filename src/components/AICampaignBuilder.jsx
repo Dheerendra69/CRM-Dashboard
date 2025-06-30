@@ -27,7 +27,7 @@ export default function AiCampaignBuilder() {
 
   return (
     <div className="ai-campaign-container">
-      <h2>OR</h2>
+      <h3>OR</h3>
       <h2>Try our AI</h2>
       <textarea
         value={query}
